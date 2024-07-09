@@ -1,8 +1,15 @@
 {
-  "name": "dxh-vue-pinia",
-  "version": "0.0.0",
-  "private": true,
+  "name": "@mdxh/vue-pinia",
+  "version": "0.0.1-beta",
+  "private": false,
+  "author": "DEVxHUB",
+  "description": "Install Pinia to vue3 using dxh wrapper",
+  "license": "MIT",
   "type": "module",
+  "keywords": [
+    "Pinia",
+    "Vue Pinia"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
@@ -12,6 +19,12 @@
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "vue": "^3.0.1"
   },
   "dependencies": {
     "pinia": "^2.1.7",

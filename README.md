@@ -1,45 +1,39 @@
 # dxh-vue-pinia
 
-This template should help get you started developing with Vue 3 in Vite.
+Install Pinia to vue3 using dxh wrapper
 
-## Recommended IDE Setup
+## Uses
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+### Installation
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+Just use the below command to install Pinia.
 
 ```sh
-npm install
+npm i -D @mdxh/vue-pinia@latest
 ```
 
-### Compile and Hot-Reload for Development
+### Create a pinia instance
+
+Create a pinia instance (the root store) and pass it to the app as a plugin:
+
+```sh
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+import App from './App.vue'
+
+const pinia = createPinia()
+const app = createApp(App)
+
+app.use(pinia)
+app.mount('#app')
+```
+
+### Start your project
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+## Pinia Documentation
 
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+See [Pinia Documentation](https://pinia.vuejs.org/introduction.html).
