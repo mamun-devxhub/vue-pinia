@@ -1,4 +1,4 @@
-# dxh-vue-pinia
+# @dxh/vue-pinia
 
 Install Pinia to vue3 using dxh wrapper
 
@@ -9,7 +9,7 @@ Install Pinia to vue3 using dxh wrapper
 Just use the below command to install Pinia.
 
 ```sh
-npm i -D @mdxh/vue-pinia@latest
+npm i @mdxh/vue-pinia@latest
 ```
 
 ### Create a pinia instance
